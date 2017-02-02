@@ -37,8 +37,6 @@ _Parameters_:
           13.0275244,
           77.54277259999999
         ],
-        "tag": "public",
-        "type": "open",
         "speed": [
           0,
           0
@@ -56,8 +54,6 @@ _Parameters_:
           12.9716981,
           77.5943417
         ],
-        "tag": "public",
-        "type": "open",
         "placeID": "ChIJ-VrecmkWrjsRtN8D7e0Ddcc",
         "placeName": "Café Coffee Day The Square",
         "aggregateRating": 0
@@ -71,8 +67,6 @@ _Parameters_:
           12.91644003243457,
           77.64907624579747
         ],
-        "tag": "public",
-        "type": "open",
         "aggregateRating": 0
       }
     },
@@ -84,8 +78,6 @@ _Parameters_:
           13.0109961,
           77.5550236
         ],
-        "tag": "public",
-        "type": "open",
         "speed": [
           841000,
           3350000
@@ -103,8 +95,6 @@ _Parameters_:
           13.028388,
           77.63988569999992
         ],
-        "tag": "public",
-        "type": "open",
         "placeID": "ChIJS9mI-ToXrjsRYc-bOMD0gPc",
         "placeName": "Bangalore city college",
         "aggregateRating": 0
@@ -138,8 +128,6 @@ _Optional parameters_:
       13.0275244,
        77.54277259999999
     ],
-    "tag": "public",
-    "type": "open",
     "speed": [
       0,
       0
