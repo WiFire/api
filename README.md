@@ -151,4 +151,4 @@ curl -u username:password -G https://wifireapi.mobstac.com/api/v1/hotspots/10860
 - `l` - coordinate array [lat,long]
 - `speed` - Avg speed of network in bytes per sec [download,upload]
 - `placeID` - Google place ID
-- `aggregateRating` - Average user rating of this hotspot
+- `aggregateRating` - Average user rating of the hotspot
