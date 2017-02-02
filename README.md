@@ -133,21 +133,21 @@ _Optional parameters_:
 ```json
 {
  "data": {
-        "g": "tdr4he8fvd",
-        "l": [
-          13.0275244,
-          77.54277259999999
-        ],
-        "tag": "public",
-        "type": "open",
-        "speed": [
-          0,
-          0
-        ],
-        "placeID": "ChIJB8kXjms9rjsRQ9CZSbMQbVw",
-        "placeName": "Sparsh Hospital",
-        "aggregateRating": 0
-      }
+    "g": "tdr4he8fvd",
+    "l": [
+      13.0275244,
+       77.54277259999999
+    ],
+    "tag": "public",
+    "type": "open",
+    "speed": [
+      0,
+      0
+    ],
+    "placeID": "ChIJB8kXjms9rjsRQ9CZSbMQbVw",
+    "placeName": "Sparsh Hospital",
+    "aggregateRating": 0
+  }
 }
 ```
 
