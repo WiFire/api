@@ -4,15 +4,17 @@ You will need an API key to access this service. Please email wifire.bizdev@mobs
 
 ## Making a request
 
-All URLs start with https://wifireapi.mobstac.com/api/v1/
+All URLs start with https://wifireapi.mobstac.com/api/v1/. We use HTTP Basic auth for request authorization.
 
-We use HTTP Basic auth for request authorization.
+*NOTE*: All API requests must come from a pre-whitelisted public IP address that belongs to your server. Your API key is tied to the IP address, so requests from other IPs are automatically rejected.
+
+We also rate-limit API requests to ensure you don't overload our server.
 
 ## API Endpoints
 
 ### 1. Hotspots
 
-Public WiFi networks are called Hotspots in the WiFire world. The following endpoints are available:
+Public WiFi networks in the WiFire database are called Hotspots. The following endpoints are available:
 
 #### `GET /hotspots`
 
@@ -20,18 +22,102 @@ Returns a list of hotspots (limit: 5) of the nearest public WiFi networks to the
 
 _Parameters_:
 
-* `latlong` (required) - Geo-location coordinates specified as [lat,long], for e.g., [12.84064832,77.66001497]
+* `latlong` (required) - Geo-location coordinate array specified as [lat,long], for e.g., [12.84064832,77.66001497].
 
 ###### Example JSON Response
 ```json
-[
-]
+{
+  "count": 5,
+  "data": [
+    {
+      "id": 10860825,
+      "body": {
+        "g": "tdr4he8fvd",
+        "l": [
+          13.0275244,
+          77.54277259999999
+        ],
+        "tag": "public",
+        "type": "open",
+        "speed": [
+          0,
+          0
+        ],
+        "placeID": "ChIJB8kXjms9rjsRQ9CZSbMQbVw",
+        "placeName": "Sparsh Hospital",
+        "aggregateRating": 0
+      }
+    },
+    {
+      "id": 10860824,
+      "body": {
+        "g": "tdr1v9qmx5",
+        "l": [
+          12.9716981,
+          77.5943417
+        ],
+        "tag": "public",
+        "type": "open",
+        "placeID": "ChIJ-VrecmkWrjsRtN8D7e0Ddcc",
+        "placeName": "Café Coffee Day The Square",
+        "aggregateRating": 0
+      }
+    },
+    {
+      "id": 10860823,
+      "body": {
+        "g": "tdr1qzq7dw",
+        "l": [
+          12.91644003243457,
+          77.64907624579747
+        ],
+        "tag": "public",
+        "type": "open",
+        "aggregateRating": 0
+      }
+    },
+    {
+      "id": 10530811,
+      "body": {
+        "g": "tdr4hb9fe1",
+        "l": [
+          13.0109961,
+          77.5550236
+        ],
+        "tag": "public",
+        "type": "open",
+        "speed": [
+          841000,
+          3350000
+        ],
+        "placeID": "ChIJQZkOs3g9rjsRlhZ6dYyogHA",
+        "placeName": "PVR",
+        "aggregateRating": 0
+      }
+    },
+    {
+      "id": 10530591,
+      "body": {
+        "g": "tdr4nexxu",
+        "l": [
+          13.028388,
+          77.63988569999992
+        ],
+        "tag": "public",
+        "type": "open",
+        "placeID": "ChIJS9mI-ToXrjsRYc-bOMD0gPc",
+        "placeName": "Bangalore city college",
+        "aggregateRating": 0
+      }
+    }
+  ]
+}
 ```
 
 ###### Copy as cURL
 
 ``` shell
-curl -H "" https://wifireapi.mobstac.com/api/v1/hotspots
+curl -u username:password -G https://wifireapi.mobstac.com/api/v1/hotspots -d latlong=12.82 -d latlong=77.41
 ```
 
 
@@ -45,12 +131,29 @@ _Optional parameters_:
 
 ###### Example JSON Response
 ```json
-[
-]
+{
+ "data": {
+        "g": "tdr4he8fvd",
+        "l": [
+          13.0275244,
+          77.54277259999999
+        ],
+        "tag": "public",
+        "type": "open",
+        "speed": [
+          0,
+          0
+        ],
+        "placeID": "ChIJB8kXjms9rjsRQ9CZSbMQbVw",
+        "placeName": "Sparsh Hospital",
+        "aggregateRating": 0
+      }
+}
 ```
 
 ###### Copy as cURL
 
 ``` shell
-curl -H "" https://wifireapi.mobstac.com/api/v1/hotspots/1234
+curl -u username:password -G https://wifireapi.mobstac.com/api/v1/hotspots/10860825
 ```
+
