@@ -6,7 +6,7 @@ You will need an API key to access this service. Please email wifire.bizdev@mobs
 
 All URLs start with https://wifireapi.mobstac.com/api/v1/. We use HTTP Basic auth for request authorization.
 
-*NOTE*: All API requests must come from a pre-whitelisted public IP address that belongs to your server. Your API key is tied to the IP address, so requests from other IPs are automatically rejected.
+*NOTE:* All API requests must come from a pre-whitelisted public IP address that belongs to your server. Your API key is tied to the IP address, so requests from other IPs are automatically rejected.
 
 We also rate-limit API requests to ensure you don't overload our server.
 
