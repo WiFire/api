@@ -145,3 +145,10 @@ _Optional parameters_:
 curl -u username:password -G https://wifireapi.mobstac.com/api/v1/hotspots/10860825
 ```
 
+### Glossary of JSON fields
+
+- `g` - geohash
+- `l` - coordinate array [lat,long]
+- `speed` - Avg speed of network in bytes per sec [download,upload]
+- `placeID` - Google place ID
+- `aggregateRating` - Average user rating of this hotspot
