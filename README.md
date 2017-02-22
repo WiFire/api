@@ -22,7 +22,7 @@ Returns a list of hotspots (limit: 5) of the nearest public WiFi networks to the
 
 _Parameters_:
 
-* `latlong` (required) - Geo-location coordinate array specified as [lat,long], for e.g., [12.84064832,77.66001497].
+* `latlong` (required) - Geo-location coordinate. To pass lat & long, use this parameter twice, for e.g., `latlong=12.84064832&latlong=77.66001497` to pass in [12.84064832,77.66001497]
 * `radius` (optional) - Radius in meters, up to 3 km. Default: 3000
 * `limit` (optional) - Number of closest hotspots to return, up to 5. Default: 5
 
@@ -111,7 +111,6 @@ _Parameters_:
 ``` shell
 curl -u username:password -G https://wifireapi.mobstac.com/api/v1/hotspots -d latlong=12.82 -d latlong=77.41
 ```
-
 
 #### `GET /hotspots/:id`
 
