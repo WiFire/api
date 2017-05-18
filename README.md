@@ -32,75 +32,78 @@ _Parameters_:
   "count": 5,
   "data": [
     {
-      "id": 10860825,
-      "body": {
-        "g": "tdr4he8fvd",
-        "l": [
-          13.0275244,
-          77.54277259999999
-        ],
-        "speed": [
-          0,
-          0
-        ],
-        "placeID": "ChIJB8kXjms9rjsRQ9CZSbMQbVw",
-        "placeName": "Sparsh Hospital",
-        "aggregateRating": 0
-      }
+      "id": "-Kegzar5AQbrp99neN3N",
+      "g": "tdr1yfb5sv",
+      "l": [
+        12.979605,
+        77.6405906
+      ],
+      "placeID": "ChIJc0JAFaUWrjsRRXSXJPX7YFo",
+      "placeName": "Toit Brewpub",
+      "speed": [
+        7713500,
+        435500
+      ],
+      "distance": 77.6,
+      "aggregateRating": 3.8,
+      "url": "http://hotspot.findwifi.co/vDxgGIrwASWx5xdY"
     },
     {
-      "id": 10860824,
-      "body": {
-        "g": "tdr1v9qmx5",
-        "l": [
-          12.9716981,
-          77.5943417
-        ],
-        "placeID": "ChIJ-VrecmkWrjsRtN8D7e0Ddcc",
-        "placeName": "Café Coffee Day The Square",
-        "aggregateRating": 0
-      }
+      "id": "-K46isqY4D7NcssaVH3q",
+      "g": "tdr1yfbq2h",
+      "l": [
+        12.9800695,
+        77.6407289
+      ],
+      "placeID": "ChIJwyjjN6UWrjsRmofzxcCt3_I",
+      "placeName": "3oh'3",
+      "speed": [
+        978977.0064571049,
+        237842.9379574884
+      ],
+      "distance": 79.5,
+      "url": "http://hotspot.findwifi.co/TbcgfgN6vGHweFLc"
     },
     {
-      "id": 10860823,
-      "body": {
-        "g": "tdr1qzq7dw",
-        "l": [
-          12.91644003243457,
-          77.64907624579747
-        ],
-        "aggregateRating": 0
-      }
+      "id": "-KE5iKsLLxtxofeec-7t",
+      "g": "tdr1wxw7yh",
+      "l": [
+        12.980799999999999,
+        77.640468
+      ],
+      "placeID": "ChIJ7_gUy7oWrjsRkOIJEP5qtV8",
+      "placeName": "The Beer Cafe",
+      "speed": [
+        77323.75553776497,
+        22549.557096725704
+      ],
+      "aggregateRating": 4,
+      "distance": 102,
+      "url": "http://hotspot.findwifi.co/ooLaW-l8nWq6xXzk"
     },
     {
-      "id": 10530811,
-      "body": {
-        "g": "tdr4hb9fe1",
-        "l": [
-          13.0109961,
-          77.5550236
-        ],
-        "speed": [
-          841000,
-          3350000
-        ],
-        "placeID": "ChIJQZkOs3g9rjsRlhZ6dYyogHA",
-        "placeName": "PVR",
-        "aggregateRating": 0
-      }
+      "id": "-KSVcKyctzLkonWmfp6J",
+      "g": "tdr1yfb0k9",
+      "l": [
+        12.9790266,
+        77.640579
+      ],
+      "placeID": "ChIJYyvzFKUWrjsRQxHn48rD5T8",
+      "placeName": "Glen's Bakehouse",
+      "distance": 124.7,
+      "url": "http://hotspot.findwifi.co/YHuhN5aRrqZtgBfg"
     },
     {
-      "id": 10530591,
-      "body": {
-        "g": "tdr4nexxu",
-        "l": [
-          13.028388,
-          77.63988569999992
-        ],
-        "placeID": "ChIJS9mI-ToXrjsRYc-bOMD0gPc",
-        "placeName": "Bangalore city college",
-        "aggregateRating": 0
-      }
+      "id": "-KSBY-V6z1_ouTEewROh",
+      "g": "tdr1yf85u",
+      "l": [
+        12.9782791,
+        77.64057869999999
+      ],
+      "placeID": "ChIJX-547aQWrjsRenl27sGSY6s",
+      "placeName": "Pizza Hut",
+      "distance": 200.5,
+      "url": "http://hotspot.findwifi.co/TzHho0cYrfSXr1cO"
     }
   ]
 }
@@ -112,45 +115,15 @@ _Parameters_:
 curl -u username:password -G https://wifireapi.mobstac.com/api/v1/hotspots -d latlong=12.82 -d latlong=77.41
 ```
 
-#### `GET /hotspots/:id`
-
-Returns detailed information about a specific hotspot, identified by the `id` path parameter
-
-_Optional parameters_:
-
-* None
-
-###### Example JSON Response
-```json
-{
- "data": {
-    "g": "tdr4he8fvd",
-    "l": [
-      13.0275244,
-       77.54277259999999
-    ],
-    "speed": [
-      0,
-      0
-    ],
-    "placeID": "ChIJB8kXjms9rjsRQ9CZSbMQbVw",
-    "placeName": "Sparsh Hospital",
-    "aggregateRating": 0
-  }
-}
-```
-
-###### Copy as cURL
-
-``` shell
-curl -u username:password -G https://wifireapi.mobstac.com/api/v1/hotspots/10860825
-```
-
 ### Glossary of JSON fields
 
+- `id` - unique identifier for this hotspot
 - `g` - geohash
 - `l` - coordinate array [lat,long]
-- `speed` - Avg speed of network in bytes per sec [download,upload]
 - `placeID` - Google place ID
-- `aggregateRating` - Average user rating of the hotspot
-- `url` - Unique user-friendly rendered web page for the hotspot that can be rendered in a WebView
+- `placeName` - name of the place hosting this hotspot
+- `speed` (optional) - average network speed in bytes per sec [download,upload]
+- `aggregateRating` (optional) - average user rating for the hotspot
+- `url` - unique user-friendly rendered web page for the hotspot that can be rendered in a WebView
+
+**Note:** The `url` has a validity of 15 minutes.
