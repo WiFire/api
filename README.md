@@ -112,7 +112,7 @@ _Parameters_:
 ###### Copy as cURL
 
 ``` shell
-curl -u username:password -G https://wifireapi.mobstac.com/api/v1/hotspots -d latlong=12.82 -d latlong=77.41
+curl -u username:password -G https://wifireapi.mobstac.com/api/v1/hotspots -d latlong=12.98 -d latlong=77.64
 ```
 
 ### Glossary of JSON fields
